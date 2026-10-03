@@ -1,0 +1,122 @@
+   * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #c9f1ff;
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 70px 1fr 70px;
+            gap: 26px;
+        }
+
+        header {
+            grid-column: 1 / 3;
+            background: #08aeb5;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 36px;
+        }
+
+        aside {
+            background: #62c969;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 32px;
+        }
+
+        article {
+            background: #ffb342;
+            padding: 40px 20px 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-size: 32px;
+        }
+
+        .images {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .image {
+            height: 160px;
+            background: #ffce45;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 28px;
+        }
+
+        footer {
+            grid-column: 1 / 3;
+            background: #08aeb5;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 36px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+
+                grid-template-columns: 1fr;
+                grid-template-rows: 70px auto auto 70px;
+                gap: 15px;
+            }
+
+            header,
+            footer {
+                grid-column: 1;
+            }
+
+            aside {
+                min-height: 200px;
+            }
+
+            article {
+                min-height: 350px;
+            }
+
+            .images {
+                grid-template-columns: 1fr;
+            }
+
+            .image {
+                height: 120px;
+            }
+        }
